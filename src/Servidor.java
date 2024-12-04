@@ -2,19 +2,18 @@ import java.io.IOException;
 import java.net.ServerSocket;
 
 public class Servidor {
-    GestorDeSubasta gestor;
-    ServerSocket socketServidor;
+    private GestorDeSubasta gestor;
 
-    public Servidor() {
+    public static void main(String[] args) {
+        int puerto = 5555;
+
         try {
-            this.socketServidor = new ServerSocket(5555);
+            ServerSocket socketServidor = new ServerSocket(puerto);
+
+
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        this.gestor = new GestorDeSubasta();
-    }
-
-    public static void main(String[] args) {
 
     }
 }
