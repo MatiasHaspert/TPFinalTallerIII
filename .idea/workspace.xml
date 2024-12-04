@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ecda41e-40f8-4ac3-b613-8c7c0eb80a6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2ecda41e-40f8-4ac3-b613-8c7c0eb80a6c" name="Changes" comment="4/12/24 15:56 -&gt; river 0 san lorenzo 1">
       <change beforePath="$PROJECT_DIR$/src/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,17 +77,19 @@
       <option name="presentableId" value="Default" />
       <updated>1732745549457</updated>
     </task>
+    <task id="LOCAL-00001" summary="4/12/24 15:56 -&gt; river 0 san lorenzo 1">
+      <option name="closed" value="true" />
+      <created>1733338601429</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733338601429</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="4/12/24 15:56 -&gt; river 0 san lorenzo 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="4/12/24 15:56 -&gt; river 0 san lorenzo 1" />
   </component>
 </project>

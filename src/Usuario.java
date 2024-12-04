@@ -24,8 +24,6 @@ public abstract class Usuario {
     public Rol getRol() {
         return r;
     }
-
-    public abstract void
 }
 
 
