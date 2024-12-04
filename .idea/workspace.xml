@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ecda41e-40f8-4ac3-b613-8c7c0eb80a6c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Rol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subastador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subastador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,18 +19,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;MatiasHaspert&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN",
+      "author": "occtarc"
+    }
+  ],
+  "lastFilter": {
+    "state": "OPEN",
+    "author": "occtarc"
   }
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/MatiasHaspert/TPFinalTallerIII.git&quot;,
@@ -41,6 +49,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2pS3Fk29oPzthNEvQKE6IRAtqPn" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

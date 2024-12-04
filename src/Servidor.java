@@ -14,4 +14,7 @@ public class Servidor {
         this.gestor = new GestorDeSubasta();
     }
 
+    public static void main(String[] args) {
+
+    }
 }
