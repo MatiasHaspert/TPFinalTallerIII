@@ -10,7 +10,6 @@ public class Servidor {
         try {
             ServerSocket socketServidor = new ServerSocket(puerto);
 
-
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
