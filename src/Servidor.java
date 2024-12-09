@@ -52,10 +52,12 @@ public class Servidor {
                 objectOut = new ObjectOutputStream(socket.getOutputStream());
 
                 // Recibir y procesar los mensajes de los clientes
+                System.out.println("Esperando un objeto");
                 Object mensaje = objectIn.readObject();
                 if (mensaje instanceof Subasta) {
-                    if(subastaActual == null) {
-                        Subasta subasta = (Subasta) mensaje;
+                    // Si el mensaje es una subasta, iniciamos la subasta
+                    if (subastaActual == null) {
+                        subastaActual = (Subasta) mensaje;
                         dataOut.writeBoolean(true);
                         // Aquí puedes manejar la lógica de la subasta, como enviar actualizaciones a los clientes
                     }
@@ -64,8 +66,8 @@ public class Servidor {
                     Participante participante = (Participante) mensaje;
                     System.out.println("Participante conectado: " + participante);
                     // Enviar el estado de la subasta al participante, si es necesario
-                    if(subastaActual == null){
-                        dataOut.writeBoolean(false);
+                    if (subastaActual == null) {
+                        dataOut.writeBoolean(false);  // Si no hay subasta, el participante debe esperar
                     }
                 }
 
@@ -74,6 +76,10 @@ public class Servidor {
             } finally {
                 try {
                     // Cerrar los streams y el socket cuando se termine
+                    if (objectIn != null) objectIn.close();
+                    if (objectOut != null) objectOut.close();
+                    if (dataIn != null) dataIn.close();
+                    if (dataOut != null) dataOut.close();
                     if (socket != null) {
                         socket.close();
                     }

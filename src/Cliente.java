@@ -2,8 +2,6 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-
-
 public class Cliente {
     private Usuario cliente;
 
@@ -12,7 +10,7 @@ public class Cliente {
     }
 
     public static void main(String[] args) {
-        Cliente clienteApp = new Cliente(null);
+        Cliente clienteApp = definirRolCliente();
 
         DataInputStream dataIn;
         DataOutputStream dataOut;
@@ -24,7 +22,7 @@ public class Cliente {
 
         try (Socket socket = new Socket(servidor, puerto)) {
             System.out.println("Conectado al servidor.");
-            clienteApp.definirRolCliente();
+
             dataIn = new DataInputStream(socket.getInputStream());
             dataOut = new DataOutputStream(socket.getOutputStream());
             objectIn = new ObjectInputStream(socket.getInputStream());
@@ -34,15 +32,24 @@ public class Cliente {
                 System.out.println("Eres un Subastador. Inicia una subasta:");
                 Subastador subastador = (Subastador) clienteApp.getCliente();
                 Subasta nuevaSubasta = new Subasta(subastador.cargarArticulo(), subastador.setTiempo(), subastador);
-                objectOut.writeObject(nuevaSubasta);
-                String mensaje = dataIn.readBoolean() ? "Subasta Iniciada" : "Error al iniciar la subasta";
+                objectOut.writeObject(nuevaSubasta); //Envio el objeto
+                objectOut.flush();
+
+                //Luego leer la respuesta del servidor
+                boolean subastaIniciada = dataIn.readBoolean();
+                String mensaje = subastaIniciada ? "Subasta Iniciada" : "Error al iniciar la subasta";
                 System.out.println(mensaje);
 
             } else if (clienteApp.getCliente() instanceof Participante) {
                 System.out.println("Eres un Participante. Esperando mensajes:");
                 Participante participante = (Participante) clienteApp.getCliente();
                 objectOut.writeObject(participante);
-                if(!dataIn.readBoolean()){System.out.println("Esperando por un subastador");}
+                objectOut.flush();
+
+                boolean esperaSubasta = dataIn.readBoolean();
+                if (!esperaSubasta) {
+                    System.out.println("Esperando por un subastador...");
+                }
             }
 
         } catch (IOException e) {
@@ -50,9 +57,9 @@ public class Cliente {
         }
     }
 
-    public void definirRolCliente() {
+    public static Cliente definirRolCliente() {
         Scanner scanner = new Scanner(System.in);
-
+        Cliente c = null;
         String tipo = "";
         while (!tipo.equals("S") && !tipo.equals("P")) {
             System.out.println("¿Desea ser Subastador o Participante? (S/P): ");
@@ -79,20 +86,19 @@ public class Cliente {
         switch (tipo) {
             case "S":
                 // Crear un subastador y asignarlo al cliente
-                Subastador subastador = new Subastador(nombre, email);
-                this.cliente = subastador; // Asignar el subastador al cliente
+                c = new Cliente(new Subastador(nombre, email));
                 System.out.println("¡Bienvenido, Subastador " + nombre + "!");
                 break;
             case "P":
                 // Crear un participante y asignarlo al cliente
-                Participante participante = new Participante(nombre, email);
-                this.cliente = participante; // Asignar el participante al cliente
+                c = new Cliente(new Participante(nombre, email));
                 System.out.println("¡Bienvenido, Participante " + nombre + "!");
                 break;
             default:
                 System.out.println("Opción no válida. Saliendo...");
                 System.exit(0); // Terminar el programa si la opción es inválida
         }
+        return c;
     }
 
     public Usuario getCliente() {

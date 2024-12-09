@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ecda41e-40f8-4ac3-b613-8c7c0eb80a6c" name="Changes" comment="logica cliente">
-      <change afterPath="$PROJECT_DIR$/src/Subasta.java" afterDir="false" />
+    <list default="true" id="2ecda41e-40f8-4ac3-b613-8c7c0eb80a6c" name="Changes" comment="ayuda">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Articulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Articulo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servidor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subastador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subastador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,25 +55,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Servidor.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Octavio/IdeaProjects/TPFinalTallerIII",
-    "onboarding.tips.debug.path": "C:/Users/haspe/OneDrive/Escritorio/Programación III/TrabajoFinalTallerIII/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Cliente.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Servidor.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Octavio/IdeaProjects/TPFinalTallerIII&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/haspe/OneDrive/Escritorio/Programación III/TrabajoFinalTallerIII/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Cliente">
     <configuration name="Cliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Cliente" />
+      <module name="TrabajoFinalTallerIII" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Servidor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Servidor" />
       <module name="TrabajoFinalTallerIII" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -85,6 +90,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Cliente" />
+        <item itemvalue="Application.Servidor" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733746109534</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ayuda">
+      <option name="closed" value="true" />
+      <created>1733757960144</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733757960153</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +170,10 @@
     <MESSAGE value="cambios" />
     <MESSAGE value="actualizacion" />
     <MESSAGE value="logica cliente" />
-    <option name="LAST_COMMIT_MESSAGE" value="logica cliente" />
+    <MESSAGE value="ayuda" />
+    <option name="LAST_COMMIT_MESSAGE" value="ayuda" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TrabajoFinalTallerIII$Cliente.ic" NAME="Cliente Coverage Results" MODIFIED="1733763287630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
