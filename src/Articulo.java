@@ -3,14 +3,12 @@ public class Articulo {
     private String descripcion;
     private float precioBase;
     private float precioFinal;
-    private Subastador propietario;
 
-    public Articulo(String nombre, String descripcion, float precioBase, Subastador propietario){
+    public Articulo(String nombre, String descripcion, float precioBase){
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precioBase = precioBase;
         this.precioFinal = precioBase;
-        this.propietario = propietario;
     }
 
     public String getNombre() {
@@ -29,7 +27,4 @@ public class Articulo {
         return precioFinal;
     }
 
-    public Subastador getPropietario() {
-        return propietario;
-    }
 }
